@@ -1,13 +1,13 @@
 import './App.css'
+import { Otp } from './components/Otp'
 
 function App() {
 
   return (
-    <>
-    {/* Grids implementation using Tailwind-CSS. */}
-    
-
-    </>
+  <div className='h-screen bg-blue-700'>
+        <Otp />
+        
+    </div>
   )
 }
 
