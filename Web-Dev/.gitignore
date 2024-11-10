@@ -1,0 +1,11 @@
+// OS Files
+
+.DS_Store
+
+// Build Output
+
+/build/
+
+// Dependencies
+
+node_modules/
