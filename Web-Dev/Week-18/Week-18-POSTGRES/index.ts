@@ -4,7 +4,7 @@ import { client } from "pg";
 const app = express();
 app.use(express.json());
 
-const pgClient = new client("postgresql://postgres_practice_owner:c5wiMkX8hfTs@ep-withered-feather-a1bltoti.ap-southeast-1.aws.neon.tech/postgres_practice?sslmode=require")
+// const pgClient = new client("postgresql://postgres_practice_owner:["Password"]@ep-withered-feather-a1bltoti.ap-southeast-1.aws.neon.tech/postgres_practice?sslmode=require")
 
 pgClient.connect();
 
