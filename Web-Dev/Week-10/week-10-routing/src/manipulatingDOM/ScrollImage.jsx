@@ -20,7 +20,7 @@ export default function ScrollImage() {
 
     return (
         <>
-            <nav className='flex gap-3'>
+            <nav className='flex gap-3 border-2 p-3'>
                 <button onClick={() => scrollToIndex(0)} className="bg-orange-900 rounded text-white text-sm px-3 py-1">
                     German Shepherd
                 </button>
@@ -32,7 +32,7 @@ export default function ScrollImage() {
                 </button>
             </nav>
 
-            <div className="flex ">
+            <div className="flex border-2 p-3">
                 <ul ref={listRef} className="flex flex-row gap-3">
                     <li>
                         <img className='w-60 h-[170px] rounded' src={GSD} alt="GSD" />
