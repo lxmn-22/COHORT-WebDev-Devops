@@ -9,6 +9,10 @@ import Counter from "./component/ClickCounter";
 import Stopwatch from "./component/Stopwatch";
 import TextInput from "./manipulatingDOM/textInput";
 import ScrollImage from "./manipulatingDOM/ScrollImage";
+import Count from "./usestate/Counter"
+import Greeting from "./usestate/Greeting";
+import Checkbox from "./usestate/Checkbox";
+import Form from "./usestate/MultipleState";
 
 function App() {
   /* 
@@ -47,6 +51,10 @@ function App() {
       {/* Example of manipulating the DOM with "useRef" */}
       <TextInput />
       <ScrollImage />
+      <Count />
+      <Greeting />
+      <Checkbox />
+      <Form />
     </div>
     
   )

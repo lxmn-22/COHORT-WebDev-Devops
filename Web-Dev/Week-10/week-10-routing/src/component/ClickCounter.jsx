@@ -16,7 +16,7 @@ export default function Counter() {
     }
 
     return (
-        <button onClick={handleClick} className="bg-blue-500 rounded text-white text-sm px-3 py-1">
+        <button onClick={handleClick} className="bg-blue-500 rounded text-white text-sm px-3 py-1 border-2">
             Click Me!
         </button>
     );
