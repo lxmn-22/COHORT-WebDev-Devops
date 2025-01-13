@@ -1,0 +1,3 @@
+CORS: Cross Origin Resource Sharing
+    - a security feature implemented by web browsers that controls, how resources on a 
+    web server can be requested from another domain.

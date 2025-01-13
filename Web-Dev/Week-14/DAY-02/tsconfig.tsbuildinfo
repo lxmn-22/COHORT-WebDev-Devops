@@ -1,1 +1,1 @@
-{"root":["./src/classes.ts","./src/functions.ts","./src/generics.ts","./src/index.ts","./src/object-types.ts"],"version":"5.6.3"}
+{"root":["./src/classes.ts","./src/functions.ts","./src/generics.ts","./src/index.ts","./src/interface.ts","./src/object-types.ts"],"errors":true,"version":"5.6.3"}

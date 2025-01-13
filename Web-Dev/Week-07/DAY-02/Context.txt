@@ -1,0 +1,5 @@
+Password, Zod
+    - Hashing Password
+    - Adding Password Encryption
+    - Error Handling (try, catch)
+    - Input Validation using Zod
