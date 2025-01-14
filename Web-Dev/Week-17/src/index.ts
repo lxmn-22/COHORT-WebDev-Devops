@@ -1,7 +1,7 @@
 import { Client } from "pg";
 
 // Provided the postgre link to the Client as an string.
-// const pgClient1 = new Client("postgresql://neondb_owner:9AdSnfT2VLCg@ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech/neondb?sslmode=require");
+// const pgClient1 = new Client("postgresql://neondb_owner:"add_neondb_password"@ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech/neondb?sslmode=require");
 
 // Providing the db credentials as the object.
 const pgClient = new Client({
