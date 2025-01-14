@@ -6,7 +6,7 @@ import { Client } from "pg";
 // Providing the db credentials as the object.
 const pgClient = new Client({
     // user: "neondb_owner",
-    // password: "9AdSnfT2VLCg",
+    // password: "add_neondb_password",
     // port: 5432,
     // host: "ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech",
     // database: "neondb",

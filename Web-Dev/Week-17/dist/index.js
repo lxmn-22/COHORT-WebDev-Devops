@@ -14,12 +14,12 @@ const pg_1 = require("pg");
 // const pgClient1 = new Client("postgresql://neondb_owner:9AdSnfT2VLCg@ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech/neondb?sslmode=require");
 // Providing the db credentials as the object.
 const pgClient = new pg_1.Client({
-    user: "neondb_owner",
-    password: "9AdSnfT2VLCg",
-    port: 5432,
-    host: "ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech",
-    database: "neondb",
-    ssl: true
+// user: "neondb_owner",
+// password: "add_neondb_password",
+// port: 5432,
+// host: "ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech",
+// database: "neondb",
+// ssl: true
 });
 // connecting to the db is an async event.
 function main() {
