@@ -15,7 +15,7 @@ function insertData(username, email, password) {
     return __awaiter(this, void 0, void 0, function* () {
         const pgClient = new pg_1.Client({
             user: "neondb_owner",
-            password: "9AdSnfT2VLCg",
+            password: "add_neondb_password",
             port: 5432,
             host: "ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech",
             database: "neondb",
