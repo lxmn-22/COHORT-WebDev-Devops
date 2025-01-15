@@ -50,3 +50,18 @@ CREATE TABLE addresses (
     -- all rows in the "addresses" table with that "user_id" are also deleted.
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+-- JOINS 
+SELECT users.id, users.username, users.email, addresses.city, addresses.country, addresses.street, addresses.pincode
+FROM users
+JOIN addresses ON users.id = addresses.user_id
+WHERE users.id = '1';
+
+SELECT u.id, u.username, u.email, a.city, a.country, a.street, a.pincode
+FROM users u
+JOIN addresses a ON u.id = a.user_id
+WHERE u.id = YOUR_USER_ID;
+
+COHORT3.0/Web-Dev/Week-17/Screenshot 2025-01-15 at 11.09.33 PM.png
+
+COHORT3.0/Web-Dev/Week-17/Screenshot 2025-01-15 at 11.09.48 PM.png
