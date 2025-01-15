@@ -10,7 +10,7 @@ app.use(express.json());
 // Providing the db credentials as the object.
 const pgClient = new Client({
     user: "neondb_owner",
-    password: "add_neondb_password",
+    password: "9AdSnfT2VLCg",
     port: 5432,
     host: "ep-black-bar-a133tcb7.ap-southeast-1.aws.neon.tech",
     database: "neondb",
@@ -57,5 +57,18 @@ app.post("/signup", async (req, res) => {
         })
     }
 })
+
+app.get("/better-metadata", async (req, res) => {
+    const id = req.query.id;
+    const query = `SELECT users.id, users.username, users.email, addresses.city, addresses.country, addresses.pincode
+    FROM users JOIN addresses ON users.id = addresses.user_id WHERE users.id = $1;`
+
+    const response = await pgClient.query(query, [id]);
+
+    res.json({
+        response : response.rows
+    })
+})
+
 
 app.listen(3000);
