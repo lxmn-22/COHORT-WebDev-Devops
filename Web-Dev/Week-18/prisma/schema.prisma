@@ -1,0 +1,26 @@
+// "schema.prisma": expects us to define the shape of our data in this file.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// created user model.
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  email    String @unique
+  password String
+}
+
+// created todo model.
+model Todo {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  done        Boolean @default(false)
+  user_id     Int
+}
