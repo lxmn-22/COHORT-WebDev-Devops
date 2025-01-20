@@ -1,0 +1,3 @@
+
+HTTP & Websockets uses -> TCP
+WebRTC can use -> TCP or UDP
