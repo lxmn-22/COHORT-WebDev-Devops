@@ -1,3 +1,5 @@
+
+/*
 import { useEffect, useRef, useState } from "react"
 
 function App() {
@@ -34,6 +36,65 @@ function App() {
         </div>
       </div>
     </>
+  )
+}
+*/
+
+import { useEffect, useRef, useState } from "react"
+
+function App() {
+  const[messages, setMessages] = useState(["Hello, Chat.", "I'm Laxman."]);
+  const wsRef = useRef();
+
+  useEffect(() => {
+    const ws = new WebSocket("http://localhost:8080");
+
+    ws.onmessage = (event) => {
+      setMessages(m => [...m, event.data])
+    }
+    wsRef.current = ws;
+
+    ws.onopen = () => {
+      ws.send(JSON.stringify({
+        type: "join",
+        payload: {
+          roomId: "red"
+        }
+      }))
+    }
+    // cleanup function.
+    return () => {
+      ws.close()
+    }
+  }, []);
+
+  return (
+    <div className="bg-black w-screen h-screen">
+      <div className="flex justify-center p-3">
+        <h1 className="flex justify-center text-white text-3xl font-bold ">Chat App</h1>
+      </div>
+        <div className="h-[85vh] p-3">
+          {messages.map(message => <div className="mt-3">
+            <span className="bg-green-600 text-white font-semibold text-lg px-4 py-1 rounded-3xl">
+              {message}
+            </span>
+          </div>)}
+        </div>
+        <div className="w-full flex py-1 gap-1 px-3">
+          <input id="message" className="w-full flex-1 rounded-3xl px-5 text-lg font-semibold" type="text" />
+          <button onClick={() => {
+            const message = document.getElementById("message")?.value;
+            wsRef.current.send(JSON.stringify({
+              type: "chat",
+              payload: {
+                message: message
+              }
+            }))
+          }} className="bg-blue-600 text-white text-lg font-semibold px-9 py-1 rounded-3xl">
+            Send
+          </button>
+        </div>
+    </div>
   )
 }
 
