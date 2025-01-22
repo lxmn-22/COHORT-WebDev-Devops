@@ -1,3 +1,22 @@
 
 HTTP & Websockets uses -> TCP
 WebRTC can use -> TCP or UDP
+
+1-Simplex Channel: send the signals only in one direction.
+Eg: Radio-station
+2-Half-Duplex Channel: send signals in both directions but in only one direction at a time.
+Eg: Walkie-Talkie
+3-Full-Duplex Channel: send signals in both the directions at the same time.
+Eg: Telephone
+
+Bandwidth is like a road for data. It tells us how much data can travel through a 
+connection in a certain amount of time.
+
+Example: Imagine a water pipe. A bigger pipe (more bandwidth) can carry more water (data) 
+at once, while a smaller pipe (less bandwidth) can carry less water.
+
+In tech terms: Bandwidth is measured in bits per second (like Mbps or Gbps). 
+If your internet has higher bandwidth, you can download or stream things faster because 
+more data can move at the same time.
+
+So, bandwidth is just the capacity of the connection to move data efficiently!
